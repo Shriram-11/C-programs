@@ -7,8 +7,10 @@ int fact(int n){
 }
 
 int main(){
-    int n;
-    printf("Enter a number: ");
-    scanf("%d",&n);
-    printf("Factorial:%d",fact(n));
+    int n,r,ncr,npr;
+    printf("Enter n and r: ");
+    scanf("%d%d",&n,&r);
+    npr=fact(n)/fact(n-r);
+    ncr=fact(n)/(fact(n-r)*fact(r));
+    printf("nPr::%d\n ncr::%d\n",npr,ncr);
 }
